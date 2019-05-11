@@ -1,0 +1,27 @@
+ <h1>Personas</h1>
+  <button class="btn btn-primary">Agregar Persona</button>
+  <p *ngIf="!(personas && personas.length)">
+    No hay registros que mostrar
+  </p>
+
+  <table *ngIf="personas && personas.length" class="table">
+    <thead>
+      <tr>
+        <td>Nombre</td>
+        <td>Fecha Nacimiento</td>
+        <td>Acciones</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let persona of personas">
+        <td>{{persona.nombre}}</td>
+        <td>{{persona.fechaNacimiento}}</td>
+        <td>
+          <button class="btn btn-primary">Editar</button>
+          <button class="btn btn-primary">Borrar</button>
+        </td>
+      </tr>
+
+    </tbody>
+
+  </table>
