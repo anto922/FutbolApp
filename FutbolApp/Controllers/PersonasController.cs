@@ -27,12 +27,13 @@ namespace FutbolApp.Controllers
         {
             // return await _context.Personas.ToListAsync();
 
-            return new List<Persona>()
-            {
-             new Persona (){ id=1,Nombre="Antonio",FechaNacimiento=new DateTime(1212,1,2)},
-              new Persona (){ id=1,Nombre="Juan",FechaNacimiento=new DateTime(1212,1,2)},
-               new Persona (){ id=1,Nombre="Jose",FechaNacimiento=new DateTime(1212,1,2)},
-            };
+            var personas = new List<Persona>();
+
+            personas.Add(new Persona { id = 1, Nombre = "Paco Ruiz", FechaNacimiento = new DateTime(2019, 04, 01) });
+            personas.Add(new Persona { id = 2, Nombre = "Luis Fernandez", FechaNacimiento = new DateTime(2019, 04, 01) });
+            personas.Add(new Persona { id = 3, Nombre = "Jose Lopez", FechaNacimiento = new DateTime(2019, 04, 01) });
+
+            return personas;
         }
 
         // GET: api/Personas/5
